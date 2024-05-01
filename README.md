@@ -29,7 +29,7 @@ Verify the creation and obtain details of the reserved static IP.
    
 Create a Kubernetes manifest file (nginx-deployment.yaml) containing the deployment, service, Ingress, and ManagedCertificate sections. Replace placeholders with actual configurations and your reserved static IP.
 
-# Deployment
+// Deployment
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -50,7 +50,8 @@ spec:
         image: nginx:latest
         ports:
         - containerPort: 80
----
+
+//service
 apiVersion: v1
 kind: Service
 metadata:
@@ -65,7 +66,8 @@ spec:
   selector:
     app: nginx
   type: LoadBalancer
----
+
+//Ingress
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata: 
@@ -87,7 +89,8 @@ spec:
             name: nginx-svc
             port: 
               number: 80               
----
+
+//GCP managed certificate
 apiVersion: networking.gke.io/v1
 kind: ManagedCertificate
 metadata:
