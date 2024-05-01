@@ -47,9 +47,9 @@ Get the Ingress external IP and update Cloud DNS in the public zone to point you
 
 Check the deployed resources in Kubernetes and GCP for verification and troubleshooting.
 
-**kubectl get svc -n flowise nginx-svc
-kubectl get ingress -n flowise nginx-ingress
-kubectl get managedcertificates -n flowise managed-cert**  --- > it should show ACTIVE
+-  kubectl get svc -n flowise nginx-svc
+-  kubectl get ingress -n flowise nginx-ingress
+-  kubectl get managedcertificates -n flowise managed-cert  --- > it should show ACTIVE
 
 Also, verify resources in GCP console for more clarity.
 
