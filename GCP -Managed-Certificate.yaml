@@ -40,7 +40,8 @@ metadata:
   name: nginx-ingress
   namespace: flowise
   annotations:
-    kubernetes.io/ingress.class: "gce"      
+    kubernetes.io/ingress.class: "gce"    
+#    W1008 03:31:44.315497   35652 warnings.go:70] annotation "kubernetes.io/ingress.class" is deprecated, please use 'spec.ingressClassName' instead
     kubernetes.io/ingress.global-static-ip-name: nginxexample
     networking.gke.io/managed-certificates: managed-cert
 spec:   
