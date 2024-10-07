@@ -53,6 +53,11 @@ Check the deployed resources in Kubernetes and GCP for verification and troubles
 
 Also, verify resources in GCP console for more clarity.
 
+6- You can test TLS/SSL certificate with this command 
+    
+  curl -vI http://dev-flowise.disearch.ai
+
+
 Remember:
 -  Ensure proper naming and labeling of resources.
 -  Replace placeholders with actual values in the manifest file.
